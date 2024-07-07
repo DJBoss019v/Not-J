@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+    <style>
+        .navbar{    
+            background-color: black;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center; /* Center the navbar */
+            align-items: center; /* Center items vertically */
+            padding: 20px; /* Adjust padding to increase size */
+        }
+
+        .navbar ul{
+            display: flex;
+            justify-content: center; /* Center the list items */
+            align-items: center; /* Center items vertically */
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .navbar li{
+            margin: 0 20px; /* Adjust spacing as needed */
+            color: white;
+        }
+
+        .navbar li a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar li a:hover{
+            color: red;
+        }
+
+        .search{
+            margin-left: 20px; /* Space between menu and search bar */
+        }
+
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 1px 17px;
+            width: 215px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px; /* Adjust padding for mobile view */
+            }
+
+            .navbar ul {
+                flex-direction: column;
+            }
+
+        }
+
+        .logo {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: auto; /* Pushes the logo to the left */
+        }
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+    </style>
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">  NOT J?</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="more.html">More</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+
+               
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <form action="action_page.php">
+      
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+      
+        </form>
+      </div>
+      
+</body>
+</html>
